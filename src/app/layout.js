@@ -1,3 +1,5 @@
+import Card from './components/card/card'
+import Navbar from './components/nav/navbar'
 import './globals.css'
 
 export const metadata = {
@@ -8,7 +10,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      
+      <body>
+        <Navbar username="sambhavgandhi02@gmail.com"/>
+       
+        {children}</body>
     </html>
   )
 }
