@@ -19,7 +19,7 @@ small: styles.smItem
 
     className={styles.container}>
    <motion.div
-   whileHover={{ scale: 1.2 }}
+   whileHover={{ scale: 1.1}}
    className={cls(styles.imgMotionWrapper,classMap[size])}>
  <Image 
       src={imgurl}
