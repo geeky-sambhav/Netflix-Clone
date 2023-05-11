@@ -1,19 +1,21 @@
+"use client"
 import React from 'react'
 import Card from './card'
 import styles from './section-cards.module.css'
 const SectionCards = (props) => {
-  const {title}=props;
+  const {title,videos,size}=props;
+console.log({videos})
+  
   return (
     <section className={styles.container}>
   <h2 className={styles.title}>{title}</h2>
 <div className={styles.cardWrapper}>
-<Card imgurl="/download.webp" size="large" />
-<Card imgurl="/download.webp" size="large" />
-<Card imgurl="/download.webp" size="large" />
-<Card imgurl="/download.webp" size="large" />
-<Card imgurl="/download.webp" size="large" />
-<Card imgurl="/download.webp" size="large" />
-<Card imgurl="/download.webp" size="large" />
+{videos.map((video,idx)=>{
+return (
+<Card id={idx} imgurl={video.imgurl} size={size} />
+
+)
+})}
 
 </div>
 
